@@ -1,6 +1,6 @@
 import Tasks from "./Tasks.jsx";
 
-export default function SelectedProject({ project, onDelete, onAddTask, onDeleteTask, tasks }) {
+export default function SelectedProject({ project, onDelete, onAddTask, onDeleteTask, tasks}) {
     const formattedDate = new Date(project.dueDate).toLocaleDateString('en-us', {
         year: 'numeric',
         month: 'short',
@@ -8,7 +8,7 @@ export default function SelectedProject({ project, onDelete, onAddTask, onDelete
     });
     return (
         <div className="w-[35rem] mt-16">
-            <header className="pb-4 mb-4 border-b-2 border-stone-300">
+            <header className="pb-4 mb-4 border-b-4 border-stone-400">
                 <div className="flex items-center justify-between">
                     <h1 className="text-3xl font-bold text-stone-600 mb-2">{project.title}</h1>
                     <button className="text-stone-600 hover:text-stone-950"

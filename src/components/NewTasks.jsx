@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function NewTasks({ onAdd }) {
+export default function NewTasks({ onAdd}) {
     const [enteredTask, setEnteredTask] = useState('');
     function handleChange(event) {
         setEnteredTask(event.target.value);
@@ -11,6 +11,7 @@ export default function NewTasks({ onAdd }) {
         onAdd(enteredTask);
         setEnteredTask('');
     }
+
     return (
         <div className="flex items-center gap-4 ">
             <input type="text" className="w-64  px-2 py-1 rounded-sm bg-stone-200"
